@@ -16,50 +16,64 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <style>
-      :root { /* :root refers to the whole page */
+      :root {
         background-color: #141414;
-        display: flex; /* flexbox allows you to easily position stuff */
-        align-items: center; /* vertical */
-        justify-content: center; /* horizontal */
-        height: 100vh; /* take up all vertical space so that it ACTUALLY becomes in the center */
-      }
-
-      * { /* * refers to every element */
-        font-family: "Ubuntu Mono", sans-serif; /* sans-serif is fallback if that font didn't load yet */
-      }
-
-      p { /* p refers to p elements */
-        color: white;
-        line-height: 0.5; /* font stuff */
-      }
-
-      .link-thingy { /* class for housing the svg and link text */
         display: flex;
-        text-decoration: none; /* remove underline from the link */
-        color: white; /* ensure link text is white */
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      * {
+        font-family: "Ubuntu Mono", sans-serif;
+      }
+
+      p {
+        color: white;
+        line-height: 0.5;
+      }
+
+      .link-thingy {
+        display: flex;
+        text-decoration: none;
+        color: white;
       }
 
       .link-container {
         display: flex;
-        justify-content: space-between; /* space out elements evenly */
-        width: 100%; /* take up full width */
-        max-width: 500px; /* limit max width */
-        margin: 0 auto; /* center the container horizontally */
-        padding: 0 48px; /* add padding on the sides for some space */
-        box-sizing: border-box; /* include padding in width calculation */
+        justify-content: space-between;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 0 48px;
+        box-sizing: border-box;
       }
 
-      .profile-container { /* New container for the PFP and text */
+      .profile-container {
         display: flex;
-        align-items: center; /* Vertically align image and text */
-        margin-bottom: -16px; /* Maintain original spacing below this section */
+        align-items: center;
+        margin-bottom: -16px;
       }
 
       .profile-container img {
-        width: 5rem; /* Adjust image size to match the text */
+        width: 5rem;
         height: 5rem;
-        margin-right: 32px; /* Space between image and text */
+        margin-right: 32px;
         border-radius: 50%;
+      }
+
+      .easter-egg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        color: #141414;
+        font-size: 1rem;
+        opacity: 0;
+      }
+
+      .easter-egg:hover {
+        color: white;
+        opacity: 1;
       }
     </style>
 
@@ -68,6 +82,9 @@
 
   <body>
     <div>
+      <div class="easter-egg">
+        <p>balint bassza a kecskét</p>
+      </div>
       <div class="profile-container">
         <img src="https://cdn.discordapp.com/avatars/932331066637832273/8010437397d22ccf1fb9bc69e215157d?size=1024" alt="PFP" />
         <p style="font-size: 4rem;">i sharted</p>
